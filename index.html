@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/STYLE.css" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <title>Classement</title>
+
+</head>
+
+<body>
+  <div id="loading">
+  </div>
+
+  <div class="title">
+    <!-- Entête -->
+    <h1>Classement des meilleurs élèves</h1>
+    <p>par Louka DOZ</p>
+  </div>
+
+  <div class="checkboxes">
+    <!-- Cases à cocher des matières -->
+    <label for="ALL">Toutes</label>
+    <input type="checkbox" id="ALL" name="subjects" onclick="checkAll(this);" value="ALL" checked>
+    <label for="ACDA">ACDA</label>
+    <input type="checkbox" id="ACDA" name="subjects" onclick="inverseChecked(this);" value="ACDA" checked>
+    <label for="ANG">Anglais</label>
+    <input type="checkbox" id="ANG" name="subjects" onclick="inverseChecked(this);" value="ANG" checked>
+    <label for="APL">APL</label>
+    <input type="checkbox" id="APL" name="subjects" onclick="inverseChecked(this);" value="APL" checked>
+    <label for="ART">Art</label>
+    <input type="checkbox" id="ART" name="subjects" onclick="inverseChecked(this);" value="ART" checked>
+    <label for="ASR">ASR</label>
+    <input type="checkbox" id="ASR" name="subjects" onclick="inverseChecked(this);" value="ASR" checked>
+    <label for="EC">EC</label>
+    <input type="checkbox" id="EC" name="subjects" onclick="inverseChecked(this);" value="EC" checked>
+    <label for="EGOD">EGOD</label>
+    <input type="checkbox" id="EGOD" name="subjects" onclick="inverseChecked(this);" value="EGOD" checked>
+    <label for="MAT">Mathématiques</label>
+    <input type="checkbox" id="MAT" name="subjects" onclick="inverseChecked(this);" value="MAT" checked>
+    <label for="SGBD">SGBD</label>
+    <input type="checkbox" id="SGBD" name="subjects" onclick="inverseChecked(this);" value="SGBD" checked>
+    <label for="SPORT">Sport</label>
+    <input type="checkbox" id="SPORT" name="subjects" onclick="inverseChecked(this);" value="SPORT" checked>
+
+    <br><br>
+    <!-- Boutons radio pour choisir entre tous les étudiants ou ceux de la promotion seulement -->
+    <label for="all">Tous</label>
+    <input type="radio" id="all" name="students" onclick="useAllStudents(true);" value="all">
+    <label for="this_year">Promotion</label>
+    <input type="radio" id="this_year" name="students" onclick="useAllStudents(false);" value="this_year" checked>
+
+    <br><br><select id="select" name="student">
+      <!-- Liste déroulante des élèves -->
+    </select>
+
+    <br><br>
+    <!-- Boutons -->
+    <button type="button" onclick="tabBugFix();">Le tableau ne s'affiche pas</button>
+    <button type="button" onclick="refresh();">Recharger la page</button>
+  </div>
+
+  <div id="list">
+    <!-- Table contenant le classement -->
+    <table>
+      <thead>
+        <tr>
+          <th>Rang</th>
+          <th>Nom</th>
+          <th>Score</th>
+        </tr>
+      </thead>
+      <tbody id='tbody'>
+        <!-- Va contenir la liste des élèves classés par score -->
+      </tbody>
+    </table>
+
+  </div>
+
+  <a id="top" href="#">Haut de page</a>
+</body>
+<script src="http://www.iut-fbleau.fr/projet/maths/?f=pagerank.js"></script>
+<script src="http://www.iut-fbleau.fr/projet/maths/?f=logins.js"></script>
+<script src="js/Init.js"></script>
+<script src="js/Rank.js"></script>
+<script src="js/PageManagement.js"></script>
+<script src="js/Main.js"></script>
+</html>

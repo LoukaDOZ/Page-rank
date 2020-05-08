@@ -1,0 +1,111 @@
+body{
+  text-align: center;
+	font-family: 'Montserrat', sans-serif;
+    background-color: rgb(50,50,50);
+}
+
+#loading{
+  position: absolute;
+  background-color: rgba(100,100,100,0.5);
+  font-size: 50px;
+  color: white;
+  text-align: center;
+  top: 0;
+  left: 0;
+}
+
+.title{
+  background-color: rgb(50,50,50);
+  color: white;
+  padding: 2%;
+}
+
+.checkboxes{
+  background-color: rgb(100,100,100);
+  color: white;
+  padding: 1%;
+}
+
+.checkboxes input{
+  margin-right: 2%;
+}
+
+.checkboxes select{
+    background-color: rgb(50,50,50);
+    color: white;
+    width: 15%;
+    padding: 0.5%;
+    border-style: none;
+  	font-family: 'Montserrat', sans-serif;
+}
+
+.checkboxes select option{
+    background-color: rgb(50,50,50);
+  	font-family: 'Montserrat', sans-serif;
+}
+
+.checkboxes button{
+  background-color: rgb(50,50,50);
+  font-size: 14px;
+  color: white;
+  width: 250px;
+  padding: 0.5%;
+  border-style: none;
+	font-family: 'Montserrat', sans-serif;
+  border-radius: 30px;
+  transition: all 0.5s;
+}
+
+.checkboxes button:hover{
+  background-color: rgb(200,0,0);
+  padding: 0.5%;
+  transition: all 0.5s;
+}
+
+#list{
+  text-align: center;
+  color: white;
+  padding: 2%;
+}
+
+#list table{
+  width: 100%;
+  font-size: 20px;
+}
+
+#list table thead tr th{
+  background-color: black;
+  text-align: left;
+  padding: 1%;
+}
+
+#list table tbody tr td{
+  text-align: left;
+  padding: 1%;
+}
+
+#list table tbody tr:hover td{
+  background-color: rgb(100,0,0);
+}
+
+#list table tbody tr:nth-child(2n + 1){
+  background-color: rgb(100,100,100);
+}
+
+#list table tbody tr:nth-child(2n){
+  background-color: rgb(200,0,0);
+}
+
+#top{
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.6);
+  color: white;
+  text-decoration: none;
+  padding: 1%;
+}
+
+#top:hover{
+  background-color: rgba(0,0,0,1);
+}
